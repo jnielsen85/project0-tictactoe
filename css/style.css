@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 .container {
@@ -23,7 +24,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: grey;
+  background: black;
   box-shadow: 5px 5px 14px #000000;
 
 
@@ -33,11 +34,11 @@
     /* border: 1px solid red; */
     position: absolute;
     height: 50px;
-    width: 200px;
+    width: 400px;
     text-align: center;
     top: 25%;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -200px;
     margin-top: -25px;
     line-height: 50px;
 }
@@ -59,13 +60,13 @@
   justify-content: center;
   font-size: 3rem;
   font-weight: bold;
-  border: 3px solid black;
+  border: 3px solid white;
   transition: background 0.2s ease-in-out;
 }
 
 .block:hover {
   cursor: pointer;
-  background: lightblue;
+  background: white;
 }
 
 #player1 {
@@ -73,7 +74,7 @@ position: flex;
 top: 325px;
 left: 600px;
   padding: 10px;
-  margin: 10px 10px;
+  margin-right: 40px;
   display: inline-grid;
   width: 150px;
   height: 150px;
@@ -81,7 +82,7 @@ left: 600px;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  border: 3px solid black;
+  border: 3px solid white;
 }
 
 #player2 {
@@ -89,7 +90,7 @@ left: 600px;
   top: 325px;
   right: 600px;
     padding: 10px;
-    margin: 10px 10px;
+    margin-left: 40px;
     display: inline-grid;
     width: 150px;
     height: 150px;
@@ -97,7 +98,7 @@ left: 600px;
     justify-content: center;
     font-size: 12px;
     font-weight: bold;
-    border: 3px solid black;
+    border: 3px solid white;
 }
 
 .names {
@@ -117,19 +118,19 @@ left: 600px;
   position: fixed;
   width: 500px;
   height: 500px;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 10px;
-  background: #ccc;
+  background: black;
   margin-top:-250px;
   margin-left: -250px;
   top: 50%;
   left: 50%;
   font-size: 32px;
-  color: royalblue;
+  color: white;
   display: none;
 }
 
-.winner{
+.result{
   margin-top: 200px;
   padding-top:25px;
   height:100px;
@@ -141,34 +142,76 @@ left: 600px;
 
 }
 
+.reset:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
 .resetDiv{
+width: 250px;
+left: 50%;
+margin-left: -125px;
+border-left: 6px solid white;
+border-right: 6px solid white;
+position: absolute;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+display:none;
+text-align: center;
+}
+
+.resetDiv .reset{
+display: inline-block;
+color: white;
+font-size: 18px;
+padding: 20px;
+margin: -6px 0;
+border-top: 6px solid white;
+border-bottom: 6px solid white;
+display:none;
+}
+
+.resetDiv::before,
+.resetDiv::after,
+.resetDiv .reset::before,
+.resetDiv .reset::after{
+content: '';
+width: 6px;
+height: 6px;
+display: block;
+position: absolute;
+background: white;
+}
+.resetDiv::before{ top: -3px; left: -3px; }
+.resetDiv::after {top: -3px; right: -3px; }
+.resetDiv .reset::before{ bottom: -3px; left: -3px; }
+.resetDiv .reset::after{ bottom: -3px; right: -3px; }
+
+
+/* .resetDiv{
 
   position: absolute;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -125px;
   height: 25px;
-  width: 150px;
+  width: 250px;
   background: none;
   display:none;
 
 
 }
 
-button.reset {
+.reset {
   border: 4px solid green;
   border-radius: 10px;
   height:25px;
-  width: 150px;
+  width: 250px;
   font-size: 1rem;
   font-weight: bold;
   background: none;
   transition: all 0.2s ease-in-out;
   display: none;
 
-}
-
-button:hover {
-  cursor: pointer;
-  background: green;
-  color: white;
-}
+} */

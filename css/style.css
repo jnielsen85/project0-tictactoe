@@ -188,30 +188,3 @@ background: white;
 .resetDiv::after {top: -3px; right: -3px; }
 .resetDiv .reset::before{ bottom: -3px; left: -3px; }
 .resetDiv .reset::after{ bottom: -3px; right: -3px; }
-
-
-/* .resetDiv{
-
-  position: absolute;
-  left: 50%;
-  margin-left: -125px;
-  height: 25px;
-  width: 250px;
-  background: none;
-  display:none;
-
-
-}
-
-.reset {
-  border: 4px solid green;
-  border-radius: 10px;
-  height:25px;
-  width: 250px;
-  font-size: 1rem;
-  font-weight: bold;
-  background: none;
-  transition: all 0.2s ease-in-out;
-  display: none;
-
-} */

@@ -11,6 +11,7 @@ const gameOverContainer = $('.gameOver');
 const resultContainer = $('.result');
 const resetContainer = $('.resetDiv');
 const reset = $('.reset');
+let whoTurn = $('.turn');
 const sqr = $('.block');
 let playerOnescore = 0;
 let playerTwoscore = 0;
@@ -26,10 +27,17 @@ const winningCombos = [
   [2, 4, 6],
 ];
 
+// const catIcon = $('#cat');
+// const dogIcon = $('#dog');
+// const xIcon = $('#X');
+// const oIcon = $('#O');
 
+/////////start button function //////////////////////////
+$('#start').click(function() {
+  window.location.href='./tictactoe.html';
+});
 
-////////////////// Games Play and Result /////////////////////
-
+////////////////// Games Play /////////////////////
 sqr.on('click', function(e){
   if($(this).text().length === 0 ) {
     movesMade++;
@@ -86,27 +94,26 @@ const checkDraw = function (){
     }
   }
 
-  /////////////////////////result / rendering functions ////////////////////////
+/////////////////////////result / rendering functions ////////////////////////
 
-
-    const declareWinner = function (winner){
+  const declareWinner = function (winner){
       gameOverContainer.css('display', "block");
       resultContainer.css('display', "block");
       resetContainer.css('display', "block")
       reset.css('display', "block");
        if(winner === player1){
-          winner = 'James';
+          winner = 'Player 1';
           playerOnescore++ ;
           $(player1).text(winner)
           $('.oneScore').text(playerOnescore);
         }else {
-          winner = 'Dom';
+          winner = 'Player 2';
           playerTwoscore++;
           $(player2).text(winner)
           $('.twoScore').text(playerTwoscore);
         }
-        resultContainer.text(winner + " wins!")
-  }
+      resultContainer.text(winner + " wins!")
+    }
 
     const declareDraw = function (draw){
       gameOverContainer.css('display', "block");
@@ -116,23 +123,9 @@ const checkDraw = function (){
       resultContainer.text("It's a draw")
     }
 
-//////////////////////update player score ///////////////////
-
-    // const playerScore = function(){
-    //   let playerOnescore = 0;
-    //
-    //   if(declareWinner(winner) === player1){
-    //     playerOnescore++
-    //     $('.oneScore').text(playerOnescore)
-    //   } else {
-    //     playerTwoscore++
-    //     $('.twoScore').text(playerOnescore)
-    //   }
-    // }
 
 /////////////////////// reset board function ///////////////////////////////
-
-  reset.on('click',function(e){
+  $('.reset').click(function(e){
     let moves = Array.prototype.slice.call($(".block"));
     let results = moves.map(function(square){
       square.innerHTML ="";
@@ -142,8 +135,17 @@ const checkDraw = function (){
     resultContainer.css('display', "none");
     resetContainer.css('display', "none")
     reset.css('display', "none");
+    whoTurn.text("Player 1's Turn")
     currentTurn=1;
     movesMade=0;
   });
-
 });
+
+//Code to revisit////
+///// update player names ///////
+// $("#start").click(function(){
+//   let playerOneName = $('#p1').val();
+//   let playerTwoName = $('#p2').val();
+//   $('#player1').val(playerOneName);
+//   $('#player2').val(playerTwoName);
+// });

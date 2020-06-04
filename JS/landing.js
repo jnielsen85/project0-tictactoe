@@ -71,4 +71,18 @@ $(this).css('display', 'inline');
 next();
 });
 
+$('#startDiv')
+.delay(5100)
+.queue(function (next) {
+$(this).css('visibility', 'visible');
+next();
+});
+
+$('#start')
+.delay(5100)
+.queue(function (next) {
+$(this).css('visibility', 'visible');
+next();
+});
+
 });

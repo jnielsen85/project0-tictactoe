@@ -26,13 +26,9 @@
   align-items: center;
   justify-content: center;
   background: black;
-  box-shadow: 5px 5px 14px #000000;
-
-
 }
 
 .container h1{
-    /* border: 1px solid red; */
     position: absolute;
     height: 50px;
     width: 400px;
@@ -54,10 +50,6 @@
   margin-left: -150px;
   margin-top: 0px;
   line-height: 25px;
-}
-
-span {
-  color: red;
 }
 
 .play-area {
@@ -98,11 +90,11 @@ left: 600px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  /* border: 3px solid white; */
+  line-height: 24px;
 }
 
 .oneScore{
-  /* border: 1px solid red; */
+
   text-align: center;
   font-size: 24px;
 }
@@ -121,11 +113,10 @@ left: 600px;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    /* border: 3px solid white; */
+    line-height: 24px;
 }
 
 .twoScore{
-  /* border: 1px solid red; */
   text-align: center;
   font-size: 24px;
 }
@@ -163,7 +154,6 @@ left: 600px;
   margin-top: 200px;
   padding-top:25px;
   height:100px;
-  /* border: 1px solid red; */
   background: none;
   text-align: center;
   vertical-align: middle;

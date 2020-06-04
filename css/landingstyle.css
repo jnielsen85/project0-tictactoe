@@ -175,7 +175,7 @@
   font-size: 50px;
   height: 100px;
   line-height: 100px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   display: inline;
   background: black;
 }
@@ -213,6 +213,29 @@
   height:25px;
   border: 1px solid red;
 }
+
+.input{
+  display: inline;
+  width:100px;
+  font-size: 14px;
+}
+
+#dog{
+  height: 101px;
+  width:101px;
+  background-image:url("icons/dog.png");
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#cat{
+  height: 101px;
+  width:101px;
+  background:url("icons/cat.png");
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
 
 /* #player1 {
 position: flex;

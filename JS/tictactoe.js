@@ -74,7 +74,7 @@ const checkDraw = function (){
     if(movesMade > 4){
       let moves = Array.prototype.slice.call($(".block"));
       let results = moves.map(function(square){
-        return square.innerHTML;
+      return square.innerHTML;
       });
       return winningCombos.find(function(combo){
         if (results[combo[0]] !== "" && results[combo[1]] !== "" && results[combo[2]] !== "" && results[combo[0]] === results[combo[1]] && results[combo[1]] === results[combo[2]]) {

@@ -71,5 +71,4 @@ $(this).css('display', 'inline');
 next();
 });
 
-
 });

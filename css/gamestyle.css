@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
   color: white;
+  background: black;
 }
 
 .container {
@@ -39,11 +40,25 @@
     top: 25%;
     left: 50%;
     margin-left: -200px;
-    margin-top: -25px;
+    margin-top: -60px;
     line-height: 50px;
 }
 
+.container h3{
+  position: absolute;
+  height: 25px;
+  width: 300px;
+  text-align: center;
+  top: 25%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: 0px;
+  line-height: 25px;
+}
 
+span {
+  color: red;
+}
 
 .play-area {
   display: grid;
@@ -82,7 +97,14 @@ left: 600px;
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  border: 3px solid white;
+  text-align: center;
+  /* border: 3px solid white; */
+}
+
+.oneScore{
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 24px;
 }
 
 #player2 {
@@ -98,7 +120,14 @@ left: 600px;
     justify-content: center;
     font-size: 12px;
     font-weight: bold;
-    border: 3px solid white;
+    text-align: center;
+    /* border: 3px solid white; */
+}
+
+.twoScore{
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 24px;
 }
 
 .names {

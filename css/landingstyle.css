@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
   color: white;
+  background:black;
 }
 
 .container {
@@ -24,6 +25,7 @@
   justify-content: center;
   background: black;
   box-shadow: 5px 5px 14px #000000;
+  border: 1px solid red;
 }
 
 .play-area {
@@ -199,6 +201,17 @@
 .block:hover {
   cursor: pointer;
   background: white;
+}
+
+#table {
+  margin-top: 100px;
+  border: 1px solid red ;
+  width:750px;
+}
+
+.cells{
+  height:25px;
+  border: 1px solid red;
 }
 
 /* #player1 {

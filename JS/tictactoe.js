@@ -12,6 +12,8 @@ const resultContainer = $('.result');
 const resetContainer = $('.resetDiv');
 const reset = $('.reset');
 const sqr = $('.block');
+let playerOnescore = 0;
+let playerTwoscore = 0;
 
 const winningCombos = [
   [0, 1, 2],
@@ -34,10 +36,12 @@ sqr.on('click', function(e){
     if(currentTurn === 1){
       $(this).text(player1);
       $(this).css('color', "red");
+      $('.turn').text("Player 2's Turn");
       currentTurn++;
     } else {
       $(this).text(player2);
       $(this).css('color', "green");
+      $('.turn').text("Player 1's Turn");
       currentTurn--;
     }
     if(checkWinner()){
@@ -82,27 +86,49 @@ const checkDraw = function (){
     }
   }
 
-  /////////////////////////outcome / rendering functions ////////////////////////
+  /////////////////////////result / rendering functions ////////////////////////
 
-  //&&&&&&&
 
     const declareWinner = function (winner){
       gameOverContainer.css('display', "block");
       resultContainer.css('display', "block");
       resetContainer.css('display', "block")
       reset.css('display', "block");
-      winner = winner === player1 ? 'James':'Dom'; //$('.user input')
-      resultContainer.text(winner + " wins!")
-
+       if(winner === player1){
+          winner = 'James';
+          playerOnescore++ ;
+          $(player1).text(winner)
+          $('.oneScore').text(playerOnescore);
+        }else {
+          winner = 'Dom';
+          playerTwoscore++;
+          $(player2).text(winner)
+          $('.twoScore').text(playerTwoscore);
+        }
+        resultContainer.text(winner + " wins!")
   }
 
     const declareDraw = function (draw){
       gameOverContainer.css('display', "block");
-      resultContainer.css('display', "block"); //rename winner container to result container
+      resultContainer.css('display', "block");
       resetContainer.css('display', "block")
       reset.css('display', "block");
       resultContainer.text("It's a draw")
     }
+
+//////////////////////update player score ///////////////////
+
+    // const playerScore = function(){
+    //   let playerOnescore = 0;
+    //
+    //   if(declareWinner(winner) === player1){
+    //     playerOnescore++
+    //     $('.oneScore').text(playerOnescore)
+    //   } else {
+    //     playerTwoscore++
+    //     $('.twoScore').text(playerOnescore)
+    //   }
+    // }
 
 /////////////////////// reset board function ///////////////////////////////
 

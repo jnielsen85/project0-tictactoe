@@ -2,6 +2,8 @@
 
 A "Retro" TTT Game and My first project as part of GA's Software Engineering Immersive. 
 
+![Gif](TTT.gif)
+
 ## Built With
 * Javascript
 * Jquery

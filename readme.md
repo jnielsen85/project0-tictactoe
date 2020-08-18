@@ -1,31 +1,22 @@
-I've a new found appreciation for the idea that software is never finished, which is certainly the case here.  Functionality that has been started but not finished includes the ability to select your own avatars and input a players name.  
+# TIC - TAC - TOE
 
-Game Site:
+A "Retro" TTT Game and My first project as part of GA's Software Engineering Immersive. 
+
+## Built With
+* Javascript
+* Jquery
+* HTML
+* CSS
+
+## Features
+A local two player, 80s / Retro inspired TTT Game.  Intended for implementation but not (yet) realised was the ability to select to avatars and set player names. 
+
+HTML was kept to a mimimum.  A place for everything and everything in it's place i.e. CSS only in CSS File and JS only in JS.  As this was a first foray into application development I deliberately experimented with different ways of doing things.  Jquery and Vanilla JS functions are occassionally blended, so too is there a mix of longform, ternary, aarow functions etc.  The experimentation (i.e. chopping and changing) served an educational purpose, though is also an endorsement for the use of psuedocode and better planning. 
+
+Animations and transitions such as the 'win notification pop up' and the index page animation were achieved through manipulating CSS with JS (for e.g. display: none to inline etc  or visibility: hidden to visible).  This coupled with the possibly gratutious use of divs means the website is not particularly accessible for those with visual impairments a concept we addressed later in the course.  
+
+One of the biggest difficulties faced came from where I least expected it.  The CSS styling required to create retro, 8bit asthetic with buttons and borders.  
+
+## Live Game:
 https://jnielsen85.github.io/project0-tictactoe/index.html
 
-Languages Used:
-HTML
-CSS
-JavaScript
-jQuery
-
-Project:
-Setting up the HTML for the page was the first step, and was done almost entirely using divs.  I tried to keep the HTML to a minimum.  There is very little to no styling in the html files.  All animations and functionality are contained in the JS and CSS files. Images for token selection (coming in V3) were applied through CSS. ID's and Classes were used heavily.
-
-Many of my variables were initially local and later changed to global as the code became more complex.  Likewise, as the code progressed, Jquery and vanilla JS were occasionally blended.  So too is there a mix of long form, ternary, arrow functions, etc.  Though most of these were re-written as long form (easier to understand when tweaking code).           
-
-While the chopping and changing served a purpose from an educational perspective, it was not the most efficient approach and an endorsement for a more methodical approach to planning and use of psuedo code.  
-
-Animations:
-Animations and transitions, including the 'win notification pop up' and the index page animation were achieved through css and JS by through a mix of delays, adding classes and updating style properties (for e.g. display none to inline.  or visibility hidden to visible)
-
-e.g.
-$(#block_0)
-.delay(5600)
-.queue(function (next) {
-$(this).css('display', 'inline');
-next();
-});
-
-Buttons (reset and start):
-HTML buttons were not used but instead divs styled (8bit retro style) in CSS.  e.g. .resetDiv and .reset and ::before and ::after properties.
